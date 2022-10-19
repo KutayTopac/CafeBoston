@@ -30,17 +30,17 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
+            this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dgvOrders = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.dgvOrderDetails = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetails)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +75,27 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "SİPARİŞ DETAYLARI";
             // 
+            // dgvOrders
+            // 
+            this.dgvOrders.AllowUserToAddRows = false;
+            this.dgvOrders.AllowUserToDeleteRows = false;
+            this.dgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrders.Location = new System.Drawing.Point(26, 36);
+            this.dgvOrders.MultiSelect = false;
+            this.dgvOrders.Name = "dgvOrders";
+            this.dgvOrders.ReadOnly = true;
+            this.dgvOrders.RowHeadersVisible = false;
+            this.dgvOrders.RowTemplate.Height = 25;
+            this.dgvOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrders.Size = new System.Drawing.Size(691, 169);
+            this.dgvOrders.TabIndex = 4;
+            this.dgvOrders.SelectionChanged += new System.EventHandler(this.dgvOrders_SelectionChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -94,17 +115,25 @@
             this.dataGridView2.Size = new System.Drawing.Size(646, 136);
             this.dataGridView2.TabIndex = 5;
             // 
-            // dgvOrders
+            // dgvOrderDetails
             // 
-            this.dgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvOrderDetails.AllowUserToAddRows = false;
+            this.dgvOrderDetails.AllowUserToDeleteRows = false;
+            this.dgvOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrders.Location = new System.Drawing.Point(26, 36);
-            this.dgvOrders.Name = "dgvOrders";
-            this.dgvOrders.RowTemplate.Height = 25;
-            this.dgvOrders.Size = new System.Drawing.Size(691, 169);
-            this.dgvOrders.TabIndex = 4;
+            this.dgvOrderDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrderDetails.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrderDetails.Location = new System.Drawing.Point(26, 31);
+            this.dgvOrderDetails.MultiSelect = false;
+            this.dgvOrderDetails.Name = "dgvOrderDetails";
+            this.dgvOrderDetails.ReadOnly = true;
+            this.dgvOrderDetails.RowHeadersVisible = false;
+            this.dgvOrderDetails.RowTemplate.Height = 25;
+            this.dgvOrderDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrderDetails.Size = new System.Drawing.Size(691, 158);
+            this.dgvOrderDetails.TabIndex = 8;
             // 
             // label3
             // 
@@ -115,18 +144,6 @@
             this.label3.Size = new System.Drawing.Size(125, 21);
             this.label3.TabIndex = 7;
             this.label3.Text = "ORDER DETAILS";
-            // 
-            // dgvOrderDetails
-            // 
-            this.dgvOrderDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderDetails.Location = new System.Drawing.Point(26, 31);
-            this.dgvOrderDetails.Name = "dgvOrderDetails";
-            this.dgvOrderDetails.RowTemplate.Height = 25;
-            this.dgvOrderDetails.Size = new System.Drawing.Size(691, 158);
-            this.dgvOrderDetails.TabIndex = 8;
             // 
             // OrderHistoryForm
             // 
@@ -142,8 +159,8 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetails)).EndInit();
             this.ResumeLayout(false);
 
