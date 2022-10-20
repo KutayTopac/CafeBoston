@@ -244,6 +244,7 @@
             this.btnMove.TabIndex = 12;
             this.btnMove.Text = "MOVE";
             this.btnMove.UseVisualStyleBackColor = true;
+            this.btnMove.Click += new System.EventHandler(this.btnMove_Click);
             // 
             // lblTableNo
             // 
